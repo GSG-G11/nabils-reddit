@@ -1,16 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="/views/media/favicon.ico">
-<link rel="stylesheet" href="/views/css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" type="image/x-icon" href="/views/media/favicon.ico" />
+    <link rel="stylesheet" href="/views/css/style.css" />
     <title>Reddit</title>
-</head>
-<body>
+  </head>
+  <body>
+    <!-- reddit header here -->
+    <header>
+      <div class="logo">
+        <a href="/">
+          <img class="logo" src="/views/media/logo.png" alt="Reddit" />
+        </a>
+      </div>
+      <div>
+        <input class="website-search" type="text" name="search" placeholder="Search Reddit" />
+      </div>
+      <i class="fa fa-bullhorn"></i>
+
+      <div class="header-text">
+        <p>
+          <a id="logIn" >Log In</a>
+          <a id="signUp" >Sign Up</a>
+        </p>
+      </div>
+      <div>
+        <i class="fa fa-user"></i>
+        <i class="fa-solid fa-angle-down"></i>
+      </div>
+    </header>
+    <!-- reddit main content here -->
+    <main>
+        <div id="logInModal" class="modal">
+
+        <div class="modal-content">
+            <div class="modal-header">
+              <span class="close">&times;</span>
+              <h2>Log in</h2>
+            </div>
+            <div class="modal-body">
+                <div class="">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="" placeholder="Your email" >
+                  </div>
+          
+                  <div class="">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Your password" id="">
+                  </div>
+                  <div>
+                    <button class="btn-signin">Log in</button>
+                  </div>
+            </div>
+          
+          </div>
+        
+        </div>
+
+        <div id="signUpModal" class="modal">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                  <span class="close">&times;</span>
+                  <h2>Sign up</h2>
+                </div>
+                <div class="modal-body">
+                    <div class="">
+                        <i class="fas fa-user"></i>
+                        <input type="email" id="" placeholder="Your username" >
+                      </div>
+              
+                    <div class="">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="" placeholder="Your email" >
+                      </div>
+              
+                      <div class="">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" placeholder="Your password" id="">
+                      </div>
+                      <div>
+                        <button class="btn-signin">Sign in</button>
+                      </div>
+                </div>
+              
+              </div>
+            
+            </div>
     
 
-    <script src="/views/js/dom.js"></script>
-</body>
+        
+        <section class="posts-container">
+
+        <div class="post">
+        <div class="votes">
+            <i class="fa-solid fa-chevron-up up-vote"></i><span>1</span
+          ><i class="fa-solid fa-chevron-down down-vote"></i>
+        </div>
+        <div class="content-container">
+          <div class="title">
+              <p>im a title</p>
+          </div>
+          <div class="content">
+           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis tempore nobis nam pariatur incidunt, assumenda, doloribus ipsa veniam exercitationem quas repellat, deleniti maiores vel blanditiis? Nesciunt optio nobis veniam dolor!</p>
+          </div>
+          <div class="details">
+          <span>by</span
+            >&nbsp;<a href="/" class="owner">Nabil</a>&nbsp;<span>7d ago</span>
+          </div>
+        </div>
+    </div>
+    <div class="post">
+        <div class="votes">
+            <i class="fa-solid fa-chevron-up up-vote"></i><span>1</span
+          ><i class="fa-solid fa-chevron-down down-vote"></i>
+        </div>
+        <div class="content-container">
+          <div class="title">
+              <p>im a title</p>
+          </div>
+          <div class="content">
+           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis tempore nobis nam pariatur incidunt, assumenda, doloribus ipsa veniam exercitationem quas repellat, deleniti maiores vel blanditiis? Nesciunt optio nobis veniam dolor!</p>
+          </div>
+          <div class="details">
+          <span>by</span
+            >&nbsp;<a href="/" class="owner">Nabil</a>&nbsp;<span>7d ago</span>
+          </div>
+        </div>
+    </div>
+</section>
+
+    </main>
+
+    <script src="./js/dom.js"></script>
+  </body>
 </html>
