@@ -12,7 +12,7 @@
       referrerpolicy="no-referrer"
     />
     <link rel="icon" type="image/x-icon" href="/views/media/favicon.ico" />
-    <link rel="stylesheet" href="/views/css/style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>Reddit</title>
   </head>
   <body>
@@ -20,7 +20,7 @@
     <header>
       <div class="logo">
         <a href="/">
-          <img class="logo" src="/views/media/logo.png" alt="Reddit" />
+          <img class="logo" src="./media/logo.png" alt="Reddit" />
         </a>
       </div>
       <div>
@@ -51,12 +51,12 @@
             <div class="modal-body">
                 <div class="">
                     <i class="fas fa-envelope"></i>
-                    <input type="email" id="" placeholder="Your email" >
+                    <input type="email" id="login-email" placeholder="Your email" >
                   </div>
           
                   <div class="">
                     <i class="fas fa-lock"></i>
-                    <input type="password" placeholder="Your password" id="">
+                    <input type="password" placeholder="Your password" id="login-pass">
                   </div>
                   <div>
                     <button class="btn-signin">Log in</button>
@@ -77,20 +77,20 @@
                 <div class="modal-body">
                     <div class="">
                         <i class="fas fa-user"></i>
-                        <input type="email" id="" placeholder="Your username" >
+                        <input type="text" id="signup-user" placeholder="Your username" required >
                       </div>
               
                     <div class="">
                         <i class="fas fa-envelope"></i>
-                        <input type="email" id="" placeholder="Your email" >
+                        <input type="email" id="signup-email" placeholder="Your email" required >
                       </div>
               
                       <div class="">
                         <i class="fas fa-lock"></i>
-                        <input type="password" placeholder="Your password" id="">
+                        <input type="password" id="signup-pass" placeholder="Your password"  required>
                       </div>
                       <div>
-                        <button class="btn-signin">Sign in</button>
+                        <button id="signup-submit" class="btn-signin">Sign in</button>
                       </div>
                 </div>
               
@@ -141,7 +141,7 @@
 </section>
 
     </main>
-
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="./js/dom.js"></script>
   </body>
 </html>

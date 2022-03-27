@@ -35,3 +35,34 @@ window.onclick = (event) => {
     logInModal.style.display = 'none';
   }
 };
+
+const signupUser = document.getElementById('signup-user');
+const signupPassword = document.getElementById('signup-pass');
+const signupEmail = document.getElementById('signup-email');
+const signupSubmit = document.getElementById('signup-submit');
+
+signupSubmit.addEventListener('click', () => {
+  const userData = {
+    username: signupUser.value,
+    email: signupEmail.value,
+    password: signupPassword.value,
+  };
+
+  fetch('/api/v1/signup', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(userData),
+  })
+    .then((res) => res.json())
+    .then((response) => {
+      console.log(response);
+      if (response.data.status === 'success') {
+        window.location.href = '/';
+      }
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+});
