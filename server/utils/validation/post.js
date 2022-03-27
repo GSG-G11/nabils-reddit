@@ -1,6 +1,12 @@
-const Joi = require('joi');
+const joi = require('joi');
 
-module.exports = Joi.object({
-  title: Joi.string().min(2).required(),
-  content: Joi.string().min(2).required(),
-});
+const postValidate = (dataObj) => {
+  const schema = joi.object({
+    title: joi.string().min(2).required(),
+    content: joi.string().min(2).required(),
+  });
+
+  return schema.validate(dataObj, { abortEarly: false });
+};
+
+module.exports = postValidate;

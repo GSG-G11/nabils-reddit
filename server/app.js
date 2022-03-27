@@ -3,7 +3,6 @@ const express = require('express');
 const compression = require('compression');
 const cookieParser = require('cookie-parser');
 const router = require('./routes');
-const { notFound, serverError } = require('./controllers');
 
 const app = express();
 
@@ -17,8 +16,6 @@ app.use([
   compression(),
   express.static(join(__dirname, '../views')),
   router,
-  notFound,
-  serverError,
 
 ]);
 module.exports = app;
