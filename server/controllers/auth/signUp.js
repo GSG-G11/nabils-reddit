@@ -5,7 +5,7 @@ const signUp = async (req, res) => {
   console.log(req.body);
   try {
     const { username, email, password } = req.body;
-    const { error } = validateSignUp(username, email, password);
+    const { error } = validateSignUp(req.body);
     if (error) {
       return res.status(400).json({ error: error.details[0].message });
     }
