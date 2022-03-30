@@ -11,10 +11,10 @@ app.disable('x-powered-by');
 app.set('port', process.env.PORT || 3000);
 app.use([
   express.json(),
-  express.urlencoded({ extended: true }),
+  express.urlencoded({ extended: false }),
   cookieParser(),
   compression(),
-  express.static(join(__dirname, '../views')),
+  express.static(join(__dirname, '..', 'views')),
   router,
 
 ]);

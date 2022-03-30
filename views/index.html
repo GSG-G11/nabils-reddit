@@ -11,7 +11,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="icon" type="image/x-icon" href="/views/media/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="./media/favicon.ico" />
     <link rel="stylesheet" href="./css/style.css" />
     <title>Reddit</title>
   </head>
@@ -30,8 +30,11 @@
 
       <div class="header-text">
         <p>
+          <span>Welcome <a href="/">nabilramy</a>!</span>
           <a id="logIn" >Log In</a>
           <a id="signUp" >Sign Up</a>
+          <a id="logOut" >Log Out</a>
+
         </p>
       </div>
       <div>
@@ -59,7 +62,7 @@
                     <input type="password" placeholder="Your password" id="login-pass">
                   </div>
                   <div>
-                    <button class="btn-signin">Log in</button>
+                    <button id="login-submit" class="btn-signin">Log in</button>
                   </div>
             </div>
           
@@ -74,7 +77,7 @@
                   <span class="close">&times;</span>
                   <h2>Sign up</h2>
                 </div>
-                <div class="modal-body">
+                <form class="modal-body">
                     <div class="">
                         <i class="fas fa-user"></i>
                         <input type="text" id="signup-user" placeholder="Your username" required >
@@ -92,17 +95,44 @@
                       <div>
                         <button id="signup-submit" class="btn-signin">Sign in</button>
                       </div>
-                </div>
+                </form>
               
               </div>
             
             </div>
+
+            <div id="add-post" class="modal">
+
+              <div class="modal-content">
+                  <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h2>Add Post</h2>
+                  </div>
+                  <div class="modal-body">
+                      <div class="">
+                          <i class="fas fa-pen"></i>
+                          <input type="text" id="post-title" placeholder="title" required >
+                        </div>
+                
+                      <div class="">
+                          <i class="fas fa-envelope"></i>
+                          <textarea name="body" id="post-body" cols="30" rows="10" required></textarea>
+                        </div>
+                
+                        <div>
+                          <button id="post-submit" >Post</button>
+                        </div>
+                  </div>
+                
+                </div>
+              
+              </div>
     
 
         
         <section class="posts-container">
 
-        <div class="post">
+        <!-- <div class="post">
         <div class="votes">
             <i class="fa-solid fa-chevron-up up-vote"></i><span>1</span
           ><i class="fa-solid fa-chevron-down down-vote"></i>
@@ -137,7 +167,7 @@
             >&nbsp;<a href="/" class="owner">Nabil</a>&nbsp;<span>7d ago</span>
           </div>
         </div>
-    </div>
+    </div> -->
 </section>
 
     </main>

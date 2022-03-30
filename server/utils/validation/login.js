@@ -6,7 +6,7 @@ const logInValidate = (dataObj) => {
     password: joi.string().min(8).max(30).required(),
   });
 
-  return schema.validate(dataObj, { abortEarly: false });
+  return schema.validateAsync(dataObj);
 };
 
 module.exports = logInValidate;

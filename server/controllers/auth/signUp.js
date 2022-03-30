@@ -3,8 +3,8 @@ const { addUser, checkEmail, checkUsername } = require('../../database/queries')
 
 const signUp = async (req, res) => {
   console.log(req.body);
+  const { username, email, password } = req.body;
   try {
-    const { username, email, password } = req.body;
     const { error } = validateSignUp(req.body);
     if (error) {
       return res.status(400).json({ error: error.details[0].message });
