@@ -65,7 +65,6 @@ signupSubmit.addEventListener('click', () => {
     email: signupEmail.value,
     password: signupPassword.value,
   };
-  console.log(userData);
   fetch('/api/v1/signup', {
     method: 'POST',
     headers: {
@@ -75,7 +74,6 @@ signupSubmit.addEventListener('click', () => {
   })
     .then((res) => res.json())
     .then((response) => {
-      console.log(response);
       if (response.data.status === 'success') {
         window.location.href = '/';
       }
@@ -103,7 +101,6 @@ loginSubmit.addEventListener('click', () => {
   })
     .then((res) => res.json())
     .then((response) => {
-      console.log(response);
       if (response.status === 'success') {
         window.location.href = '/';
       }
@@ -155,9 +152,8 @@ document.querySelector('#post-submit').addEventListener('click', () => {
   })
     .then((res) => res.json())
     .then((response) => {
-      console.log(response);
-      if (response.data.status === 'success') {
-         window.location.href = '/';
+      if (response.status === 'success') {
+        window.location.href = '/';
       }
     })
     .catch((error) => {
@@ -167,8 +163,6 @@ document.querySelector('#post-submit').addEventListener('click', () => {
 
 const parentPosts = document.querySelector('.posts-container');
 const parsePostInDom = (postsArr) => {
-  console.log(typeof postsArr);
-
   postsArr.forEach((post) => {
     fetch(`/username/${post.user_id}`, {
       method: 'GET',
@@ -230,7 +224,6 @@ window.onload = () => {
     .then((response) => {
       if (response.status === 'success') {
         parsePostInDom(response.rows);
-        console.log(response.rows);
       }
     });
 };
