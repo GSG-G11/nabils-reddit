@@ -157,7 +157,7 @@ document.querySelector('#post-submit').addEventListener('click', () => {
     .then((response) => {
       console.log(response);
       if (response.data.status === 'success') {
-        // window.location.href = '/';
+         window.location.href = '/';
       }
     })
     .catch((error) => {
