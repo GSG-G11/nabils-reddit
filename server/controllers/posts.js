@@ -23,7 +23,6 @@ const homePostsController = async (req, res) => {
 const addPostController = async (req, res) => {
   try {
     req.body.id = req.user;
-    console.log(req.body);
     const { rows } = await addPost(req.body);
     res.status(201).json({ status: 'success', rows });
   } catch (error) {
