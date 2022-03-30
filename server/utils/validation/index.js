@@ -1,9 +1,9 @@
-const logIn = require('./login');
-const signUp = require('./signup');
+const validateLogIn = require('./login');
+const validateSignUp = require('./signup');
 const post = require('./post');
 
 module.exports = {
-  logIn,
-  signUp,
+  validateLogIn,
+  validateSignUp,
   post,
 };

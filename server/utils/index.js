@@ -1,13 +1,15 @@
 const { signToken, verifyToken } = require('./jwt');
-const { logIn, signUp, post } = require('./validation');
+const { validateLogIn, validateSignUp, post } = require('./validation');
 const { hashPassword, comparePassword } = require('./password');
+const customError = require('./customError');
 
 module.exports = {
   signToken,
   verifyToken,
-  logIn,
-  signUp,
+  validateLogIn,
+  validateSignUp,
   post,
   hashPassword,
   comparePassword,
+  customError,
 };
